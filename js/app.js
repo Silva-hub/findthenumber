@@ -16,6 +16,7 @@ function drawTable() {
 
     // creates a <table> element
     const tbl = document.createElement('table');
+    const numbers = generateRandomNumbers();
 
     // creating rows
     for (let r = 0; r < totalRows; r++) {
@@ -24,9 +25,7 @@ function drawTable() {
         // create cells in row
         for (let c = 0; c < cellsInRow; c++) {
             let cell = document.createElement('td');
-            getRandom = Math.floor(Math.random() * (max - min + 1)) + min;
-            let cellText = document.createTextNode(Math.floor(Math.random() * (max - min + 1)) + min);
-            cell.appendChild(cellText);
+            cell.innerHTML = numbers[c+r];
             row.appendChild(cell);
         }
 
@@ -35,3 +34,5 @@ function drawTable() {
 
     randomnum1.appendChild(tbl); // appends <table> into <div1>
 }
+
+drawTable();
