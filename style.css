@@ -10,6 +10,18 @@ body {
 }
 
 
+table {
+    border-collapse:collapse;
+    border:1px solid #7f7f7f;
+}
+td {
+    border:1px solid #7f7f7f;
+    width:50px;
+    height:50px;
+    text-align:center;
+}
+
+
 .random-num{
     height:300px;
     margin-top:70px;
@@ -38,5 +50,6 @@ body {
     float: left;
     padding: 100px;
 }
+
 
 
